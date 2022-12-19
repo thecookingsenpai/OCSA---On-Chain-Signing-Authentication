@@ -1,0 +1,25 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+<script src="auth_client.js"></script>
+
+<body>
+    <head>
+        <title>Auth Client</title>
+    </head>
+
+    <h1>Auth Client</h1>
+    <button id="login">Login</button>
+    <h3 id="status">Waiting</h3>
+</body>
+
+<script>
+    // On click event
+    document.getElementById("login").addEventListener("click", async () => {
+        var addy = await connect();
+        console.log(addy);
+        document.getElementById("status").innerHTML = "Logged in";
+        document.getElementById("login").innerHTML = "Logged in as " + addy;
+        var result = await login();
+        document.getElementById("status").innerHTML = result;
+        
+    });
+</script>
