@@ -9,6 +9,7 @@ This module is a work in progress and should be used with a grain of salt
 ### Usage
 
 Host auth.js on a server and run it:
+
     npm install
     node auth.js
 
